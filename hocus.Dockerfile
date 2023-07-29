@@ -18,4 +18,4 @@ RUN sudo apt-get update \
     && fish -c "KERL_BUILD_DOCS=yes asdf install elixir latest" \
     && fish -c "asdf global nodejs latest" \
     && fish -c "asdf global erlang latest" \
-    && fish -c "asdf global nodejs latest"
+    && fish -c "asdf global elixir latest"

@@ -18,5 +18,3 @@ vscode:
     - emeraldwalk.RunOnSave
     # Code spell checking
     - streetsidesoftware.code-spell-checker
-    # Prose linter
-    - errata-ai.vale-server
