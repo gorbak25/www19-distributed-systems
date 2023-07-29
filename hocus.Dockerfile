@@ -16,6 +16,6 @@ RUN sudo apt-get update \
     && fish -c "asdf install nodejs latest" \
     && fish -c "KERL_BUILD_DOCS=yes asdf install erlang latest" \
     && fish -c "KERL_BUILD_DOCS=yes asdf install elixir latest" \
+    && fish -c "asdf global nodejs latest" \
     && fish -c "asdf global erlang latest" \
-    && fish -c "asdf global erlang latest" \
-    && fish -c "asdf global erlang latest"
+    && fish -c "asdf global nodejs latest"
