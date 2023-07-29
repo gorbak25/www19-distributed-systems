@@ -11,5 +11,5 @@ RUN DEBIAN_FRONTEND=noninteractive sudo apt-get install -y psmisc expect unzip c
     && fish -c "asdf plugin add elixir https://github.com/asdf-vm/asdf-elixir.git" \
     && fish -c "asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git" \
     && fish -c "asdf install nodejs latest" \
-    && fish -c "asdf install erlang latest" \
-    && fish -c "asdf install elixir latest"
+    && fish -c "KERL_BUILD_DOCS=yes asdf install erlang latest" \
+    && fish -c "KERL_BUILD_DOCS=yes asdf install elixir latest"
