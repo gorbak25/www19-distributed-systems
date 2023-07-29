@@ -1,0 +1,27 @@
+image:
+  file: hocus.Dockerfile
+  buildContext: ./
+tasks:
+  - name: Blog
+    prebuild: |
+      yarn install
+    workspaceShell: fish
+    workspace: |
+      yarn dev
+  - name: Terminal
+    prebuild: sleep 0.1
+    workspaceShell: fish
+    workspace: sleep 0.1
+vscode:
+  extensions:
+    - astro-build.astro-vscode
+    - esbenp.prettier-vscode
+    - dbaeumer.vscode-eslint
+    - eamodio.gitlens
+    - dcortes92.FreeMarker
+    - AntonLilleby.xp-freemarker-formatter
+    - emeraldwalk.RunOnSave
+    # Code spell checking
+    - streetsidesoftware.code-spell-checker
+    # Prose linter
+    - errata-ai.vale-server
