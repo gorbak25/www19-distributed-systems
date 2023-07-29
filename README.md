@@ -1,1 +1,78 @@
-aaa
+# Distributed systems workshops 
+
+# Day 1 - Elixir basics
+## New project
+```bash
+mix new day1 --module Workshops # Create a new elixir project
+cd day1
+iex -S mix # Start project in an interactive shell
+```
+## The basics
+```elixir
+# Numbers
+1 + 2
+1
+2 * 2
+# Floats
+1 + 2.0
+# Lists(https://hexdocs.pm/elixir/1.12.3/List.html)
+[1, 2, 3, 4]
+[1, "two", 3]
+[1 | [2, 3, 4]]
+[1 | 2] # improper list
+# Inspect type of something
+i [1, 2]
+# Pattern matching
+[head | tail] = [1, 2, 3]
+1 = 1
+1 = 2
+# Character lists
+'asdf'
+# Strings
+"ASDF"
+"A" <> t = "ASDF"
+# Atoms
+:asdf
+# Tuples
+{ 1, 2 }
+# "Booleans"
+true
+false
+1 == 1
+true == :true
+false == :false
+# Almost everything is an atom
+(List.last [1,2,3]) == 3
+List == :"Elixir.List"
+Hmm == :"Elixir.Hmm"
+# Anonymous Functions
+add = fn (a, b) -> a + b end
+add.(1, 2)
+mul = &(&1 * &2)
+mul.(2, 3)
+# Printing stuff
+IO.puts "ASDF"
+# Help
+h IO.puts/1
+h IO.puts/2
+# Writing functions on lists + pattern matching
+# - List length
+# - List reverse
+# - List map
+# - Fibonacci
+# Function composition using the |> operator + builtins
+# Data structures? - T = {:leaf, V} | {:node, T}
+# Message passing
+self # what is this?
+spawn fn -> :asdf end # what is this?
+pid = spawn(fn -> 1 + 2 end)
+Process.alive?(pid)
+Process.alive?(self())
+send(self, :hello)
+receive do x -> IO.puts x end
+:nothing == (receive do x -> x after 1_000 -> :nothing end)
+send(self, :hello)
+:hello == (receive do x -> x after 1_000 -> :nothing end)
+# Supervision tree - spawn_link
+# Genserver
+```
