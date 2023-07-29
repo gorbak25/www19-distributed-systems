@@ -2,12 +2,6 @@ image:
   file: hocus.Dockerfile
   buildContext: ./
 tasks:
-  - name: Blog
-    prebuild: |
-      yarn install
-    workspaceShell: fish
-    workspace: |
-      yarn dev
   - name: Terminal
     prebuild: sleep 0.1
     workspaceShell: fish
