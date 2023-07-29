@@ -14,7 +14,8 @@ tasks:
     workspace: sleep 0.1
 vscode:
   extensions:
-    - astro-build.astro-vscode
+    - pgourlain.erlang
+    - JakeBecker.elixir-ls
     - esbenp.prettier-vscode
     - dbaeumer.vscode-eslint
     - eamodio.gitlens
