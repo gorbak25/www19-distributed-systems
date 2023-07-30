@@ -7,8 +7,14 @@ defmodule Workshops.Application do
 
   @impl true
   def start(_type, _args) do
+    topologies = [
+      local_epmd_example: [
+        strategy: Elixir.Cluster.Strategy.LocalEpmd
+      ]
+    ]
     children = [
-      ExampleGenServer
+      ExampleGenServer,
+      #{Cluster.Supervisor, [topologies, [name: Workshops.ClusterSupervisor]]},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

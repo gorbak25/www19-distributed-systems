@@ -3,10 +3,12 @@
 # 2. Add methods to get the state length
 # 2. Add the ability to snapshot the stack - save/restore
 defmodule ExampleGenServer do
+  require Logger
   use GenServer
   @me :stack_genserver
 
   def start_link(_a) do
+    Logger.info("Hello")
     GenServer.start_link(__MODULE__, [], name: @me)
   end
 
