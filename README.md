@@ -91,3 +91,5 @@ send(self, :hello)
 # Implementing naive map reduce
 Prezentacja: http://soft.vub.ac.be/~tvcutsem/talks/presentations/tvcutsem_MapReduce_ErlangFactory.pdf
 https://gist.github.com/oxling/3194570
+
+# RPC between nodes - Distributed Erlang!
