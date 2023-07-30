@@ -62,6 +62,15 @@ h IO.puts/2
 # - Fibonacci
 # Function composition using the |> operator + builtins
 # Data structures? - T = {:leaf, V} | {:node, T}
+```
+
+# Day 2 - Let's write map reduce
+# Warmup
+- Write a function which applies an anonymous function to every element of a list
+- Write fold left & reduce
+
+# Processes
+```elixir
 # Message passing
 self # what is this?
 spawn fn -> :asdf end # what is this?
@@ -76,3 +85,9 @@ send(self, :hello)
 # Supervision tree - spawn_link
 # Genserver
 ```
+
+# Playing with gen server with stack
+
+# Implementing naive map reduce
+Prezentacja: http://soft.vub.ac.be/~tvcutsem/talks/presentations/tvcutsem_MapReduce_ErlangFactory.pdf
+https://gist.github.com/oxling/3194570
