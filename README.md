@@ -65,6 +65,13 @@ h IO.puts/2
 ```
 
 # Day 2 - Let's write map reduce
+# Odpalenie projektu
+```bash
+cd day2
+mix deps.get
+iex -S mix ru^C
+```
+
 # Warmup
 - Write a function which applies an anonymous function to every element of a list
 - Write fold left & reduce
