@@ -112,5 +112,5 @@ iex -S mix phx.server
 
 ## Run distributed phoenix
 ```
-iex --cookie asdf --name mike@(tailscale ip -4) -S mix phx.server
+iex --cookie asdf --name mike@$(tailscale ip -4) -S mix phx.server
 ```

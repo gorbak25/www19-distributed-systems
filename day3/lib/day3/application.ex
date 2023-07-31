@@ -19,7 +19,7 @@ defmodule Day3.Application do
       # Start a worker by calling: Day3.Worker.start_link(arg)
       # {Day3.Worker, arg}
 
-      {Cluster.Supervisor, [Application.get_env(:libcluster, :topologies), [name: MyApp.ClusterSupervisor]]}
+      {Cluster.Supervisor, [Application.get_env(:libcluster, :topologies), [name: Day3.ClusterSupervisor, debug: true]]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -14,7 +14,7 @@ config :libcluster,
       strategy: Cluster.Strategy.Tailscale,
       config: [
         authkey: System.get_env("TAILSCALE_APIKEY"),
-        tailnet: "hedgehog-hen.ts.net",
+        tailnet: "gorbak25@gmail.com",
         hostname: "erlang-workshop",
         appname: "mike"
       ]
