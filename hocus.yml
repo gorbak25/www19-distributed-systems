@@ -5,7 +5,7 @@ tasks:
   - name: Terminal
     prebuild: fish -c 'cd day2; mix deps.get; mix deps.compile'; fish -c 'cd day3; mix deps.get; mix deps.compile'
     workspaceShell: fish
-    workspace: sleep 0.1
+    workspace: bash -c 'tailscale up --authkey=$(TAILSCALE_AUTHKEY) --hostname=erlang-workshops'
 vscode:
   extensions:
     - pgourlain.erlang
