@@ -69,7 +69,7 @@ h IO.puts/2
 ```bash
 cd day2
 mix deps.get
-iex -S mix ru^C
+iex --cookie mycookie --name node1@127.0.0.1 -S mix run
 ```
 
 # Warmup

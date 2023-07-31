@@ -3,7 +3,7 @@ image:
   buildContext: ./
 tasks:
   - name: Terminal
-    prebuild: cd day2; mix deps.get
+    prebuild: fish -c 'cd day2; mix deps.get; mix deps.compile'
     workspaceShell: fish
     workspace: sleep 0.1
 vscode:
