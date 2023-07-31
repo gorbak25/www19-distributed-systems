@@ -65,18 +65,18 @@ h IO.puts/2
 ```
 
 # Day 2 - Let's write map reduce
-# Odpalenie projektu
+## Odpalenie projektu
 ```bash
 cd day2
 mix deps.get
 iex --cookie mycookie --name node1@127.0.0.1 -S mix run
 ```
 
-# Warmup
+## Warmup
 - Write a function which applies an anonymous function to every element of a list
 - Write fold left & reduce
 
-# Processes
+## Processes
 ```elixir
 # Message passing
 self # what is this?
@@ -93,10 +93,20 @@ send(self, :hello)
 # Genserver
 ```
 
-# Playing with gen server with stack
+## Playing with gen server with stack
 
-# Implementing naive map reduce
+## Implementing naive map reduce
 Prezentacja: http://soft.vub.ac.be/~tvcutsem/talks/presentations/tvcutsem_MapReduce_ErlangFactory.pdf
 https://gist.github.com/oxling/3194570
 
-# RPC between nodes - Distributed Erlang!
+## RPC between nodes - Distributed Erlang!
+
+# Day3 - let's write a p2p Discord
+## Project setup
+```bash
+mix phx.new day3 --no-ecto
+cd day3
+HEX_MIRROR=https://cdn.jsdelivr.net/hex mix deps.get
+iex -S mix phx.server
+```
+
