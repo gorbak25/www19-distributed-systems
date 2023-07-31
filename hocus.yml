@@ -5,7 +5,7 @@ tasks:
   - name: Terminal
     prebuild: fish -c 'cd day2; mix deps.get; mix deps.compile'; fish -c 'cd day3; mix deps.get; mix deps.compile'
     workspaceShell: fish
-    workspace: bash -c 'tailscale up --authkey=${TAILSCALE_AUTHKEY} --hostname=erlang-workshop'
+    workspace: bash -c 'source ~/dev/.hocus/env.sh; sudo tailscale up --authkey=${TAILSCALE_AUTHKEY} --hostname=erlang-workshop'
 vscode:
   extensions:
     - pgourlain.erlang
