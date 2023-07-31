@@ -7,6 +7,20 @@
 # General application configuration
 import Config
 
+config :libcluster,
+  debug: true,
+  topologies: [
+    tailscale: [
+      strategy: Cluster.Strategy.Tailscale,
+      config: [
+        authkey: System.get_env("TAILSCALE_APIKEY"),
+        tailnet: "hedgehog-hen.ts.net",
+        hostname: "erlang-workshop",
+        appname: "mike"
+      ]
+    ]
+  ]
+
 # Configures the endpoint
 config :day3, Day3Web.Endpoint,
   url: [host: "localhost"],

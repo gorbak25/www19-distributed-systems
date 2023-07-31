@@ -7,12 +7,6 @@ defmodule Day3.Application do
 
   @impl true
   def start(_type, _args) do
-    topologies = [
-      local_epmd_example: [
-        strategy: Elixir.Cluster.Strategy.LocalEpmd
-      ]
-    ]
-
     children = [
       # Start the Telemetry supervisor
       Day3Web.Telemetry,
@@ -25,7 +19,7 @@ defmodule Day3.Application do
       # Start a worker by calling: Day3.Worker.start_link(arg)
       # {Day3.Worker, arg}
 
-      {Cluster.Supervisor, [topologies, [name: Day3Web.ClusterSupervisor]]},
+      {Cluster.Supervisor, [Application.get_env(:libcluster, :topologies), [name: MyApp.ClusterSupervisor]]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -47,7 +47,8 @@ defmodule Day3.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:libcluster, "~> 3.3"}
+      {:libcluster, "~> 3.3"},
+      {:libcluster_tailscale, "~> 0.1.0"}
     ]
   end
 
