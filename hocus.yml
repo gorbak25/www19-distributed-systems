@@ -3,9 +3,13 @@ image:
   buildContext: ./
 tasks:
   - name: Terminal
+    prebuild: tailscale up --authkey=${TAILSCALE_AUTHKEY} --hostname=erlang-workshops
+    workspaceShell: bash
+    workspace: sleep 0.1
+  - name: Terminal
     prebuild: fish -c 'cd day2; mix deps.get; mix deps.compile'; fish -c 'cd day3; mix deps.get; mix deps.compile'
     workspaceShell: fish
-    workspace: bash -c 'tailscale up --authkey=$(TAILSCALE_AUTHKEY) --hostname=erlang-workshops'
+    workspace: sleep 0.1
 vscode:
   extensions:
     - pgourlain.erlang

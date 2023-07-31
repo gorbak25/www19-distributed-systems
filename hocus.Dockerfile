@@ -20,5 +20,5 @@ RUN sudo apt-get update \
     && fish -c "asdf global erlang latest" \
     && fish -c "asdf global elixir latest"
 RUN fish -c "mix archive.install hex phx_new" \
-    && sudo apt-get install -y  inotify-tools \
+    && sudo apt-get install -y inotify-tools \
     && curl -fsSL https://tailscale.com/install.sh | sh
